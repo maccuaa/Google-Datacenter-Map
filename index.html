@@ -8,8 +8,8 @@
     </head>
     <body>
         <div id="panel">
-            <button onclick="toggleHeatmap()">Toggle Heatmap</button>
-            <button onclick="toggleSubmarineCables()">Toggle Undersea Cables</button>
+            <button id="heatmap_toggle">Toggle Heatmap</button>
+            <button id="cablemap_toggle">Toggle Undersea Cables</button>
         </div>
         <div id="map-canvas">
         </div>
@@ -18,12 +18,9 @@
         <!--<script type="text/javascript"-->
                 <!--src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization&key=AIzaSyBKVUvzmplAGo-7zOlRy9zE5DfKsw0-Rok">-->
         <!--</script>-->
-        <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization">
-        </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
 
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/data/search_volume_data.js"></script>
+        <script src="js/vendor/jquery-2.1.1.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- TODO: Uncomment me when going live -->
