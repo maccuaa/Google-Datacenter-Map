@@ -1,0 +1,185 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-81.547383, 35.89855]
+            },
+            "properties": {
+                "city": "Lenoir, North Carolina",
+                "description": "One of the reasons Google chose the city of Lenoir, North Carolina is its roots as a factory town in the furniture industry. Since furniture mills used a lot of power, we were able to reuse much of the existing power infrastructure. Lenoir is now home to the Internet, but also to our data center employees. Because of this, we've awarded more than $350,000 in grants and provided over $2M in free advertising to local nonprofits. We've also invested in several green initiatives, including a project to turn hog waste into renewable energy.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-80.03767, 33.073824]
+            },
+            "properties": {
+                "city": "Berkeley County, South Carolina",
+                "description": "Here in Berkeley County, we’ve tried to give back more than jobs to the community. We’ve made an investment of over half a million dollars to local schools and nonprofits and introduced free Wi-Fi to downtown Goose Creek. In June 2012, we hosted Googlefest in nearby Charleston to help nonprofits, small businesses, and educators use the full range of Google’s tools.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-84.584814, 33.749733]
+            },
+            "properties": {
+                "city": "Douglas County, Georgia",
+                "description": "Google has been working for years to optimize our data center designs in order to minimize our environmental footprint. A good example is at our Douglas County, Georgia facility where we built a water processing facility and treatment plant in order to make sure our water usage didn’t take fresh water away from the local community.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-95.330061, 36.241139]
+            },
+            "properties": {
+                "city": "Mayes County, Oklahoma",
+                "description": "At our data center in Pryor, Oklahoma, we've built strong ties with the Cherokee community. We've created over 100 jobs and awarded grants to local schools to help them upgrade their equipment so students can stay ahead of the curve.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-95.863867, 41.221583]
+            },
+            "properties": {
+                "city": "Council Bluffs, Iowa",
+                "description": "We're always looking to improve the way we run our data centers by pursuing innovation in efficiency and quality control. Here in Council Bluffs, Iowa, we found a way to use renewable energy by purchasing power from a nearby wind farm. This helps support local green initiatives as well as shrink our footprint overall.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-121.202267, 45.632511]
+            },
+            "properties": {
+                "city": "The Dalles, Oregon",
+                "description": "Here among Oregon’s rolling hills, snow-capped peaks and brisk Columbia River, we make Google products and services available to the entire world. The Dalles data center location was chosen for its mild climate and access to hydroelectric power. Our staff has continued this green thinking by starting a community garden on one corner of the site.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-122.085661, 37.421682]
+            },
+            "properties": {
+                "city": "Mountain View, California",
+                "description": "Google Global HQ",
+                "type": "hq"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.003203, 40.741355]
+            },
+            "properties": {
+                "city": "111 Eighth Avenue, Manhatten, New York",
+                "description": "",
+                "type": "hq"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.059484, -34.452218]
+            },
+            "properties": {
+                "city": "Quilicura, Chile",
+                "description": "Chile offers an ideal combination of reliable infrastructure, a skilled workforce and a commitment to transparent and business friendly regulations. Chile also fosters an atmosphere of innovation, and in recent years has developed cutting edge policies and programs that encourage the growth of the Internet. As with all of our facilities around the world, we chose Quilicura following a thorough and rigorous site selection process.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.8079189999999983, 50.489845]
+            },
+            "properties": {
+                "city": "St. Ghislain, Belgium",
+                "description": "St. Ghislain has the right combination of energy infrastructure and developable land. The local authorities also have a strong vision for how the Internet can bring economic benefits and jobs to the area. The Digital Innovation Valley project has created a cluster of high-tech businesses and put technology at the heart of the education system. As a result, we had a great team of people supporting investment in the area who were very helpful during our site selection process.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.236288000000002, 53.339821]
+            },
+            "properties": {
+                "city": "Dublin, Ireland",
+                "description": "Google Europe HQ. Located in the heart of the historic docklands district (a.k.a. Silicon Docks), Google has helped put Dublin on the map as a technology hub in Europe. Our office is made up of thousands of Googlers from all over the world, overseeing operations for our business in Europe, the Middle East and Africa.",
+                "type": "hq"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.44206299999999, 53.320108]
+            },
+            "properties": {
+                "city": "Dublin, Ireland",
+                "description": "Dublin has the right combination of energy infrastructure, developable land, and available workforce for the data center. We were able to take the same approach to construction as we did in Hamina, Finland, using local engineering and construction expertise to re-develop an existing building.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.11700300000001, 60.536578]
+            },
+            "properties": {
+                "city": "Hamina, Finland",
+                "description": "We had the unique opportunity to salvage an old paper mill in Hamina, Finland and use the pre-existing infrastructure to build a data center there. The large site sits on the beautiful Baltic Sea and is able to use raw sea water, piped through a pre-existing tunnel, to cool our servers naturally. After the cooling process, we dissipate the remaining heat and mix it in with more seawater before using it for cooling again.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [120.46589799999998, 23.991936]
+            },
+            "properties": {
+                "city": "Changhua County, Taiwan",
+                "description": "Taiwan is a leading high-tech hub, with a history of supporting innovation and foreign investment, and a location right in the heart of Asia. To power its high-tech industry and thriving Internet economy, Taiwan has invested in reliable infrastructure, innovative world-class talent and a stable and accommodating regulatory environment. As with all of our facilities around the world, we chose Changhua County following a thorough and rigorous site selection process, taking many technical and other considerations into account, including location, infrastructure, workforce, reasonable business regulations and cost.",
+                "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [103.84540900000002, 1.314663]
+            },
+            "properties": {
+                "city": "Singapore",
+                "description": "Singapore offers an ideal combination of reliable infrastructure, a skilled workforce and a commitment to transparent and business friendly regulations. Singapore also has a vibrant Internet economy and is located in the center of one of the fastest growing Internet markets in the world, Southeast Asia, where millions of users are coming online every day for information and entertainment, new business opportunities and better ways to connect with friends and family, near and far.",
+                "type": "datacenter"
+            }
+        }
+    ]
+}

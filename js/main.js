@@ -1,7 +1,7 @@
-var map, heatmap;
+var map, heatmap, cablemap;
 var google = google;
 
-function initialize() {
+function InitializeBaseMap () {
     var mapOptions = {
         center: new google.maps.LatLng(37.7047713, 2.0497792),
         zoom: 3,
@@ -10,7 +10,64 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    // Load heat map data
+    var infoWindow = new google.maps.InfoWindow({
+        content: "",
+        maxWidth: 400
+    });
+
+    LoadDataCenterMarkers();
+
+    LoadSubmarineCableData();
+
+    AddEventListeners(infoWindow);
+
+    InitializeHeatMap();
+}
+
+function AddEventListeners (infowindow) {
+    google.maps.event.addListener(map,'click',function() {
+        infowindow.close();
+    });
+
+    map.data.addListener('click', function(event) {
+        var city = event.feature.getProperty('city');
+        var description = event.feature.getProperty('description');
+
+        // TODO - Add attribution paragraph (source)
+        infowindow.setContent('<div>' +
+                                '<h1>' + city + '</h1>' +
+                                '<div>' +
+                                    '<p>' + description + '</p>' +
+                                '</div>' +
+                              '</div>');
+
+        infowindow.setPosition(event.feature.getGeometry().get());
+        infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+        infowindow.open(map);
+    });
+
+    cablemap.addListener('click', function(event) {
+        var name = event.feature.getProperty('name');
+        var length = event.feature.getProperty('length');
+        var rfs = event.feature.getProperty('RFS');
+        var description = event.feature.getProperty('description');
+
+        // TODO - Add attribution paragraph (source)
+        infowindow.setContent('<div>' +
+        '<h1>' + name + '</h1>' +
+        '<div>' +
+            '<div><b>Length: </b>' + length + '</div>' +
+            '<div><b>Ready for service: </b>' + rfs + '</div>' +
+            '<p>' + description + '</p>' +
+        '</div>' +
+        '</div>');
+
+        infowindow.setPosition(event.latLng);
+        infowindow.open(map);
+    });
+}
+
+function InitializeHeatMap () {
     var map_data = [];
     for (var i = 0; i < search_data.length; i+=4) {
         var lat = search_data[i];
@@ -26,40 +83,53 @@ function initialize() {
     });
 
     heatmap.set('dissipating', false);
-
-    heatmap.setMap(map);
 }
+
+function LoadDataCenterMarkers () {
+    map.data.loadGeoJson('js/data/data_center_locations.json');
+    map.data.setStyle(function(feature) {
+        var title = feature.getProperty('city');
+
+        var marker_type = feature.getProperty('type');
+        var icon;
+
+        switch (marker_type){
+            case 'hq':
+                icon = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
+                break;
+            case 'datacenter':
+                icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+                break;
+            default:
+                icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+        }
+
+        return {
+            title: title,
+            icon: icon
+        };
+    });
+}
+
+function LoadSubmarineCableData () {
+    cablemap = new google.maps.Data();
+    cablemap.loadGeoJson('js/data/submarine-cables.json');
+    cablemap.setStyle(function(feature) {
+        var color = feature.getProperty('color');
+
+        return {
+            strokeColor: color
+        };
+    });
+}
+
 
 function toggleHeatmap() {
     heatmap.setMap(heatmap.getMap() ? null : map);
 }
 
-function changeGradient() {
-    var gradient = [
-        'rgba(0, 255, 255, 0)',
-        'rgba(0, 255, 255, 1)',
-        'rgba(0, 191, 255, 1)',
-        'rgba(0, 127, 255, 1)',
-        'rgba(0, 63, 255, 1)',
-        'rgba(0, 0, 255, 1)',
-        'rgba(0, 0, 223, 1)',
-        'rgba(0, 0, 191, 1)',
-        'rgba(0, 0, 159, 1)',
-        'rgba(0, 0, 127, 1)',
-        'rgba(63, 0, 91, 1)',
-        'rgba(127, 0, 63, 1)',
-        'rgba(191, 0, 31, 1)',
-        'rgba(255, 0, 0, 1)'
-    ];
-    heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+function toggleSubmarineCables() {
+    cablemap.setMap(cablemap.getMap() ? null : map);
 }
 
-function changeRadius() {
-    heatmap.set('radius', heatmap.get('radius') ? null : 5);
-}
-
-function changeOpacity() {
-    heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', InitializeBaseMap);
