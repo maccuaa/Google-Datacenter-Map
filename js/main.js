@@ -2,35 +2,47 @@ $.google = google;
 
 $(document).ready(function() {
 
-    var map, heatmap, cablemap;
+    var map, heatmap, cablemap, datacentermap, landingpointmap;
     var google = $.google;
+
+    var circle ={
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'white',
+        fillOpacity: 1,
+        scale: 3.5,
+        strokeColor: 'black',
+        strokeWeight: 1
+    };
 
     function InitializeBaseMap () {
         var mapOptions = {
             center: new google.maps.LatLng(37.7047713, 2.0497792),
             zoom: 3,
-            mapTypeId: google.maps.MapTypeId.TERRAIN
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            panControl: false,
+            zoomControl: true,
+            mapTypeControl: true,
+            scaleControl: true,
+            streetViewControl: false,
+            overviewMapControl: true
         };
 
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-        var infoWindow = new google.maps.InfoWindow({
-            content: "",
-            maxWidth: 400
-        });
 
         LoadDataCenterMarkers();
 
         LoadSubmarineCableData();
 
+        LoadLandingPoints();
+
         InitializeHeatMap();
 
-        AddEventListeners(infoWindow);
+        AddEventListeners();
     }
 
     function InitializeHeatMap () {
         $.getScript ("js/data/search_volume_data.js")
-        .done(function(script, textStatus) {
+        .done(function() {
             var map_data = [];
             for (var i = 0; i < search_data.length; i+=4) {
                 var lat = search_data[i];
@@ -47,14 +59,15 @@ $(document).ready(function() {
 
             heatmap.set('dissipating', false);
         })
-        .fail(function(jqxhr, settings, exception ) {
+        .fail(function() {
             console.log ("Error loading heatmap data");
         });
     }
 
     function LoadDataCenterMarkers () {
-        map.data.loadGeoJson('js/data/data_center_locations.json');
-        map.data.setStyle(function(feature) {
+        datacentermap = new google.maps.Data();
+        datacentermap.loadGeoJson('js/data/data_center_locations.json');
+        datacentermap.setStyle(function(feature) {
             var title = feature.getProperty('city');
 
             var marker_type = feature.getProperty('type');
@@ -62,10 +75,10 @@ $(document).ready(function() {
 
             switch (marker_type){
                 case 'hq':
-                    icon = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
+                    icon = $("#hq-icon").attr('src');
                     break;
                 case 'datacenter':
-                    icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+                    icon = $("#datacenter-icon").attr('src');
                     break;
                 default:
                     icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
@@ -76,6 +89,7 @@ $(document).ready(function() {
                 icon: icon
             };
         });
+        datacentermap.setMap(map);
     }
 
     function LoadSubmarineCableData () {
@@ -90,7 +104,20 @@ $(document).ready(function() {
         });
     }
 
-    function AddEventListeners (infowindow) {
+    function LoadLandingPoints () {
+        landingpointmap = new google.maps.Data();
+        landingpointmap.loadGeoJson('js/data/landing_points.json');
+        landingpointmap.setStyle(function (feature) {
+            var title = feature.getProperty('city');
+
+            return {
+                title: title,
+                icon: circle
+            };
+        });
+    }
+
+    function AddEventListeners () {
 
         $('#heatmap_toggle').click(function() {
             toggleHeatmap();
@@ -98,27 +125,20 @@ $(document).ready(function() {
 
         $('#cablemap_toggle').click(function() {
             toggleSubmarineCables();
-        })
-
-        google.maps.event.addListener(map,'click',function() {
-            infowindow.close();
         });
 
-        map.data.addListener('click', function(event) {
+        $("#what_is_this_button").click(function() {
+            $("#whatModal").modal('toggle');
+        });
+
+        datacentermap.addListener('click', function(event) {
             var city = event.feature.getProperty('city');
             var description = event.feature.getProperty('description');
 
-            // TODO - Add attribution paragraph (source)
-            infowindow.setContent('<div>' +
-                                    '<h1>' + city + '</h1>' +
-                                    '<div>' +
-                                        '<p>' + description + '</p>' +
-                                    '</div>' +
-                                  '</div>');
+            $("#infoModalTitle").html(city);
+            $("#infoModalBody").html(description);
 
-            infowindow.setPosition(event.feature.getGeometry().get());
-            infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
-            infowindow.open(map);
+            $('#infoModal').modal('toggle');
         });
 
         cablemap.addListener('click', function(event) {
@@ -127,21 +147,12 @@ $(document).ready(function() {
             var rfs = event.feature.getProperty('RFS');
             var description = event.feature.getProperty('description');
 
-            // TODO - Add attribution paragraph (source)
-            infowindow.setContent('<div>' +
-            '<h1>' + name + '</h1>' +
-            '<div>' +
-                '<div><b>Length: </b>' + length + '</div>' +
-                '<div><b>Ready for service: </b>' + rfs + '</div>' +
-                '<p>' + description + '</p>' +
-            '</div>' +
-            '</div>');
+            $("#infoModalTitle").html(name);
+            $("#infoModalBody").html(description);
 
-            infowindow.setPosition(event.latLng);
-            infowindow.open(map);
+            $('#infoModal').modal('toggle');
         });
     }
-
 
     function toggleHeatmap() {
         heatmap.setMap(heatmap.getMap() ? null : map);
@@ -149,6 +160,7 @@ $(document).ready(function() {
 
     function toggleSubmarineCables() {
         cablemap.setMap(cablemap.getMap() ? null : map);
+        landingpointmap.setMap(landingpointmap.getMap() ? null : map);
     }
 
     google.maps.event.addDomListener(window, 'load', InitializeBaseMap);

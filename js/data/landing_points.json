@@ -1,0 +1,174 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.408259,
+          43.118544
+        ]
+      },
+      "properties": {
+        "city": "Bandon, Oregon, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.954603,
+          34.976653
+        ]
+      },
+      "properties": {
+        "city": "Chikura, Japan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.874331,
+          34.336810
+        ]
+      },
+      "properties": {
+        "city": "Shima, Japan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.388047,
+          33.844427
+        ]
+      },
+      "properties": {
+        "city": "Redondo Beach, California, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.205689,
+          22.224999
+        ]
+      },
+      "properties": {
+        "city": "Chung Hom Kok, Hong Kong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.695823,
+          14.317386
+        ]
+      },
+      "properties": {
+        "city": "Nasugbu, Philippines"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.675512,
+          23.354588
+        ]
+      },
+      "properties": {
+        "city": "Shantou, China"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.597004,
+          7.078424
+        ]
+      },
+      "properties": {
+        "city": "Songkhla, Thailand"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.570631,
+          4.703718
+        ]
+      },
+      "properties": {
+        "city": "Telisai, Brunei"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.647101,
+          1.338193
+        ]
+      },
+      "properties": {
+        "city": "Tuas, Singapore"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.088945,
+          26.350290
+        ]
+      },
+      "properties": {
+        "city": "Boca Raton, Florida, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.542968,
+          -3.718836
+        ]
+      },
+      "properties": {
+        "city": "Fortaleza, Brazil"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.328072,
+          -23.961795
+        ]
+      },
+      "properties": {
+        "city": "Santos, Brazil"
+      }
+    }
+  ]
+}

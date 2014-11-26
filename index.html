@@ -3,15 +3,68 @@
         <meta charset="UTF-8">
         <title>Google's Global Connection</title>
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" href="favicon.ico">
     </head>
     <body>
-        <div id="panel">
-            <button id="heatmap_toggle">Toggle Heatmap</button>
-            <button id="cablemap_toggle">Toggle Undersea Cables</button>
+        <div id="map-canvas"></div>
+
+        <div class="row" id="map-toggles">
+            <div class="col-md-4">
+                <button type="button" class="btn btn-default" id="heatmap_toggle">Toggle Heatmap</button>
+                <button type="button" class="btn btn-default" id="cablemap_toggle">Toggle Undersea Cables</button>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-6">
+                    <div>
+                        <b>Headquarters : </b>
+                        <img id="hq-icon" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" class="img-rounded" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <b>Datacenter : </b>
+                        <img id="datacenter-icon" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" class="img-rounded" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-default" id="what_is_this_button">What is this?</button>
+            </div>
         </div>
-        <div id="map-canvas">
+
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="infoModalTitle">Modal title</h4>
+                    </div>
+                    <div id="infoModalBody" class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="whatModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="whatModalTitle">Google's Global Connections</h4>
+                    </div>
+                    <div id="whatModalBody" class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- TODO: Uncomment me when going live. Delete second api reference -->
@@ -21,6 +74,7 @@
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
 
         <script src="js/vendor/jquery-2.1.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- TODO: Uncomment me when going live -->

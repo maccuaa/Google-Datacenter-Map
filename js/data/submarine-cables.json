@@ -3,6 +3,13 @@
   "features": [
     {
       "type": "Feature",
+      "properties": {
+        "name": "Unity/EAC-Pacific",
+        "color": "#a6459a",
+        "length": "9,620 km",
+        "description": "Unity is jointly owned by a consortium of six companies. Pacnet owns two fiber pairs that the company refers to as EAC-Pacific. The remaining three fiber pairs are jointly owned by the other consortium members.",
+        "RFS": "March 2010"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -22,17 +29,17 @@
             -118.388047, 33.844427
           ]
         ]
-      },
-      "properties": {
-        "name": "Unity/EAC-Pacific",
-        "color": "#a6459a",
-        "length": "9,620 km",
-        "description": "Unity is jointly owned by a consortium of six companies. Pacnet owns two fiber pairs that the company refers to as EAC-Pacific. The remaining three fiber pairs are jointly owned by the other consortium members.",
-        "RFS": "March 2010"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "name": "Southeast Asia Japan Cable (SJC)",
+        "color": "#b2703f",
+        "length": "8,900 km",
+        "description": "",
+        "RFS": "June 2013"
+      },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
@@ -124,17 +131,17 @@
             ]
           ]
         ]
-      },
-      "properties": {
-        "name": "Southeast Asia Japan Cable (SJC)",
-        "color": "#b2703f",
-        "length": "8,900 km",
-        "description": "",
-        "RFS": "June 2013"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "name": "FASTER",
+        "color": "#9ea0a2",
+        "length": "10,290 km",
+        "description": "",
+        "RFS": "Q2 2016"
+      },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
@@ -175,17 +182,17 @@
             ]
           ]
         ]
-      },
-      "properties": {
-        "name": "FASTER",
-        "color": "#9ea0a2",
-        "length": "10,290 km",
-        "description": "",
-        "RFS": "Q2 2016"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "name": "Monet",
+        "color": "#b3b5b7",
+        "length": "10,566 km",
+        "description": "",
+        "RFS": "Q4 2016"
+      },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
@@ -227,13 +234,6 @@
             ]
           ]
         ]
-      },
-      "properties": {
-        "name": "Monet",
-        "color": "#b3b5b7",
-        "length": "10,566 km",
-        "description": "",
-        "RFS": "Q4 2016"
       }
     }
   ]

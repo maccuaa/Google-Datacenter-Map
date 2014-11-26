@@ -86,13 +86,31 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-html, body, #map-canvas {
+html, body {
     height: 100%;
+}
+
+#map-canvas {
+    height: 93%;
     margin: 0;
     padding: 0;
 }
 
+html #map-toggles {
+    text-align: center;
+    padding: 10px;
+    width: 100%
+}
 
+#map-toggles button {
+    background-image: none;
+    margin: 0 10px;
+}
+
+#legend {
+    background: white;
+    padding: 10px;
+}
 
 
 
