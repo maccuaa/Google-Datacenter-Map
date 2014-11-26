@@ -102,7 +102,7 @@ html #map-toggles {
     width: 100%
 }
 
-#map-toggles button {
+#map-toggles button, .modal button {
     background-image: none;
     margin: 0 10px;
 }

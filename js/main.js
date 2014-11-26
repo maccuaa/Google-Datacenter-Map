@@ -2,6 +2,9 @@ $.google = google;
 
 $(document).ready(function() {
 
+    // TODO - Differentiate between planned and current google data centers
+    // TODO - Add Netherlands datacenter
+
     var map, heatmap, cablemap, datacentermap, landingpointmap;
     var google = $.google;
 
@@ -9,7 +12,7 @@ $(document).ready(function() {
         path: google.maps.SymbolPath.CIRCLE,
         fillColor: 'white',
         fillOpacity: 1,
-        scale: 3.5,
+        scale: 2.5,
         strokeColor: 'black',
         strokeWeight: 1
     };
@@ -17,7 +20,7 @@ $(document).ready(function() {
     function InitializeBaseMap () {
         var mapOptions = {
             center: new google.maps.LatLng(37.7047713, 2.0497792),
-            zoom: 3,
+            zoom: 2,
             mapTypeId: google.maps.MapTypeId.TERRAIN,
             panControl: false,
             zoomControl: true,
@@ -38,6 +41,8 @@ $(document).ready(function() {
         InitializeHeatMap();
 
         AddEventListeners();
+
+        toggleSubmarineCables();
     }
 
     function InitializeHeatMap () {
