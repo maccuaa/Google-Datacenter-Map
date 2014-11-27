@@ -6,6 +6,44 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+html, body, .container-large {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+#map-container {
+    height: 93%;
+}
+
+#map-canvas {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map-toggles {
+    text-align: center;
+    padding: 10px;
+    width: 100%
+}
+
+#map-toggles button, .modal button {
+    background-image: none;
+    margin: 0 10px;
+}
+
+.scotch-panel-wrapper {
+    height: 100%;
+}
+
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -81,47 +119,6 @@ fieldset {
 textarea {
     resize: vertical;
 }
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-html, body {
-    height: 100%;
-}
-
-#map-canvas {
-    height: 93%;
-    margin: 0;
-    padding: 0;
-}
-
-html #map-toggles {
-    text-align: center;
-    padding: 10px;
-    width: 100%
-}
-
-#map-toggles button, .modal button {
-    background-image: none;
-    margin: 0 10px;
-}
-
-#legend {
-    background: white;
-    padding: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes

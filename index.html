@@ -5,52 +5,59 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/slide-menu.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" href="favicon.ico">
     </head>
     <body>
-        <div id="map-canvas"></div>
+        <div class="slide-menu slide-menu-vertical slide-menu-right" id="info-panel">
+            <h3 id="title">Menu</h3>
+        </div>
+        <div class="container container-large">
+            <!--=============================================================================================================
 
-        <div class="row" id="map-toggles">
-            <div class="col-md-4">
-                <button type="button" class="btn btn-default" id="heatmap_toggle">Toggle Heatmap</button>
-                <button type="button" class="btn btn-default" id="cablemap_toggle">Toggle Undersea Cables</button>
+            Google Map Canvas
+
+            =============================================================================================================-->
+            <div class="row no-gutter" id="map-container">
+                <div class="col-md-12" id="map-canvas"></div>
             </div>
-            <div class="col-md-4">
-                <div class="col-md-6">
-                    <div>
-                        <b>Headquarters : </b>
-                        <img id="hq-icon" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" class="img-rounded" />
+
+            <!--=============================================================================================================
+
+            Map Button Toggles
+
+            =============================================================================================================-->
+            <div class="row no-gutter" id="map-toggles">
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-default" id="heatmap_toggle">Toggle Heatmap</button>
+                    <button type="button" class="btn btn-default" id="cablemap_toggle">Toggle Undersea Cables</button>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-6">
+                        <div>
+                            <b>Headquarters : </b>
+                            <img id="hq-icon" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" class="img-rounded" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <b>Datacenter : </b>
+                            <img id="datacenter-icon" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" class="img-rounded" />
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div>
-                        <b>Datacenter : </b>
-                        <img id="datacenter-icon" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" class="img-rounded" />
-                    </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-default" id="what_is_this_button">What is this?</button>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-default" id="what_is_this_button">What is this?</button>
             </div>
         </div>
 
-        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="infoModalTitle">Modal title</h4>
-                    </div>
-                    <div id="infoModalBody" class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--=============================================================================================================
 
+        What is this modal
+
+        =============================================================================================================-->
         <div class="modal fade" id="whatModal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -77,17 +84,23 @@
                         <p>Google&#39;s success, can in large part, be attributed to its speed and ability to scale its operations.  While official numbers have never been released, it is estimated that Google has at least 900,000 servers to run all it services.  The bulk of these servers are housed in data centers Google has built in strategic locations around the world to handle all the traffic it receives and keep their operations running uninterrupted.  The location of these datacenters is chosen very carefully as a number of very important factors must be present for a site to be considered suitable.</p>
                         <h4 id="factors">Factors</h4>
                         <ul>
-                            <li><p><em>Availability of large amounts of cheap electricity</em><br>  Data centers require massive amounts of power to run and cool all their servers.  Google considers the exact amount of power one of their data centers uses to be a trade secret, but it is estimated that just one of its datacenters needs anywhere from 50 - 100 Megawatts of power.</p>
+                            <li><p><em>Availability of large amounts of cheap electricity</em>  </p>
+                                <p>  Data centers require massive amounts of power to run and cool all their servers.  Google considers the exact amount of power one of their data centers uses to be a trade secret, but it is estimated that just one of its datacenters needs anywhere from 50 - 100 Megawatts of power.</p>
                             </li>
-                            <li><p><em>Google’s commitment to carbon neutrality</em><br>  Because of the amounts of power required to run a datacenter, Google has become a big supporter of using renewable energy.  So far Google is using renewable energy to power over 35% of their operations and is actively involved in growing the renewables industry with over $1.5 billion in funding agreements for renewable energy projects.</p>
+                            <li><p><em>Google’s commitment to carbon neutrality</em>  </p>
+                                <p>  Because of the amounts of power required to run a datacenter, Google has become a big supporter of using renewable energy.  So far Google is using renewable energy to power over 35% of their operations and is actively involved in growing the renewables industry with over $1.5 billion in funding agreements for renewable energy projects.</p>
                             </li>
-                            <li><p><em>Availability of a large water supply</em><br>  Servers produce heat. A lot of heat. And when you have thousands of them in one building, cooling all them can become very costly.  Because of this, Google has situated many of its datacenters near large bodies of water and use them as massive thermal reservoirs.</p>
+                            <li><p><em>Availability of a large water supply</em>  </p>
+                                <p>  Servers produce heat. A lot of heat. And when you have thousands of them in one building, cooling all them can become very costly.  Because of this, Google has situated many of its datacenters near large bodies of water and use them as massive thermal reservoirs.</p>
                             </li>
-                            <li><p><em>Large chunks of land</em><br>  For security reasons, it is important for Google to build its data centers on large parcels of land.  This allows for a large buffer zone between nearby roads and the datacenter and makes the facilty easier to secure.  In addition, the exra land real estate can also be used to install wind farms or solar panels to act as supplemental power to the datacenter.</p>
+                            <li><p><em>Large chunks of land</em>  </p>
+                                <p>  For security reasons, it is important for Google to build its data centers on large parcels of land.  This allows for a large buffer zone between nearby roads and the datacenter and makes the facilty easier to secure.  In addition, the exra land real estate can also be used to install wind farms or solar panels to act as supplemental power to the datacenter.</p>
                             </li>
-                            <li><p><em>Fast connections to other data centers</em><br>  The advantages to having a powerful datacenter are rendered moot if the connections in and out of it are slow.  Because of this, Google chooses sites based on their proximity to other Google data centers as well as their proximity to large backbone networks that can transmit their data quickly over very large distances.</p>
+                            <li><p><em>Fast connections to other data centers</em>  </p>
+                                <p>  The advantages to having a powerful datacenter are rendered moot if the connections in and out of it are slow.  Because of this, Google chooses sites based on their proximity to other Google data centers as well as their proximity to large backbone networks that can transmit their data quickly over very large distances.</p>
                             </li>
-                            <li><p><em>Tax incentives</em><br>  Building a state-of-the-art datacenter is expensive.  At the same time however, they generate a lot of tax revenue and create a lot of jobs for the city (and state) they are built in.  Because of this, there is often competition between cities to attract Google to build their facilities.  This will often result in massive tax incentives for Google to offset the cost of building the datacenter.</p>
+                            <li><p><em>Tax incentives</em>  </p>
+                                <p>  Building a state-of-the-art datacenter is expensive.  At the same time however, they generate a lot of tax revenue and create a lot of jobs for the city (and state) they are built in.  Because of this, there is often competition between cities to attract Google to build their facilities.  This will often result in massive tax incentives for Google to offset the cost of building the datacenter.</p>
                             </li>
                         </ul>
                         <p>Some other factors that play a role include, political climate and threat of natural disasters.  These will be discussed in more detail when discussing certain datacenters.</p>
@@ -99,6 +112,11 @@
             </div>
         </div>
 
+        <!--=============================================================================================================
+
+        Javascripts
+
+        =============================================================================================================-->
         <!-- TODO: Uncomment me when going live. Delete second api reference -->
         <!--<script type="text/javascript"-->
                 <!--src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization&key=AIzaSyBKVUvzmplAGo-7zOlRy9zE5DfKsw0-Rok">-->

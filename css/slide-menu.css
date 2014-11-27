@@ -1,0 +1,89 @@
+.slide-menu {
+    background: #FFFFFF;
+    position: fixed;
+}
+
+.slide-menu h3 {
+    color: #afdefa;
+    font-size: 1.9em;
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    background: #0d77b6;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.slide-menu-vertical {
+    width: 30%;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.slide-menu-left {
+    left: -30%;
+}
+
+.slide-menu-right {
+    right: -30%;
+}
+
+.slide-menu-left.slide-menu-open {
+    left: 0px;
+}
+
+.slide-menu-right.slide-menu-open {
+    right: 0px;
+}
+
+/* Transitions */
+
+.slide-menu,
+.slide-menu-push {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+    .slide-menu-horizontal {
+        font-size: 75%;
+        height: 110px;
+    }
+
+    .slide-menu-top {
+        top: -110px;
+    }
+
+    .slide-menu-bottom {
+        bottom: -110px;
+    }
+
+}
+
+@media screen and (max-height: 26.375em){
+
+    .slide-menu-vertical {
+        font-size: 90%;
+        width: 190px;
+    }
+
+    .slide-menu-left,
+    .slide-menu-push-toleft {
+        left: -190px;
+    }
+
+    .slide-menu-right {
+        right: -190px;
+    }
+
+    .slide-menu-push-toright {
+        left: 190px;
+    }
+}

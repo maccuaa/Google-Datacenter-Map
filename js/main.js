@@ -137,13 +137,21 @@ $(document).ready(function() {
         });
 
         datacentermap.addListener('click', function(event) {
-            var city = event.feature.getProperty('city');
-            var description = event.feature.getProperty('description');
 
-            $("#infoModalTitle").html(city);
-            $("#infoModalBody").html(description);
+            map.setCenter(event.latLng);
+            map.setZoom(20);
+            setTimeout(x, 500);
+            function x () {
+                $('#info-panel').addClass('slide-menu-open');
+            }
 
-            $('#infoModal').modal('toggle');
+            //var city = event.feature.getProperty('city');
+            //var description = event.feature.getProperty('description');
+            //
+            //$("#infoModalTitle").html(city);
+            //$("#infoModalBody").html(description);
+            //
+            //$('#infoModal').modal('toggle');
         });
 
         cablemap.addListener('click', function(event) {
