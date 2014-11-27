@@ -8,6 +8,9 @@ $(document).ready(function() {
     var map, heatmap, cablemap, datacentermap, landingpointmap;
     var google = $.google;
 
+    var default_map_center = new google.maps.LatLng(37.7047713, 2.0497792);
+    var default_map_zoom = 2;
+
     var circle ={
         path: google.maps.SymbolPath.CIRCLE,
         fillColor: 'white',
@@ -17,10 +20,15 @@ $(document).ready(function() {
         strokeWeight: 1
     };
 
+    var panel = $('#info-panel');
+    var panel_title = panel.find('#title');
+    var panel_image = panel.find('#panel-image');
+    var panel_description = panel.find('#panel-description');
+
     function InitializeBaseMap () {
         var mapOptions = {
-            center: new google.maps.LatLng(37.7047713, 2.0497792),
-            zoom: 2,
+            center: default_map_center,
+            zoom: 3,
             mapTypeId: google.maps.MapTypeId.TERRAIN,
             panControl: false,
             zoomControl: true,
@@ -31,6 +39,8 @@ $(document).ready(function() {
         };
 
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        setPanelContent("About this site", 'img/global.jpg', $('#about_this_site').html());
 
         LoadDataCenterMarkers();
 
@@ -132,8 +142,15 @@ $(document).ready(function() {
             toggleSubmarineCables();
         });
 
-        $("#what_is_this_button").click(function() {
-            $("#whatModal").modal('toggle');
+        $("#panel_toggle").click(function() {
+            $('#info-panel').toggleClass('slide-menu-open');
+        });
+
+        $("#map_reset").click(function() {
+            map.setCenter(default_map_center);
+            map.setZoom(default_map_zoom);
+            closeInfoPanel();
+            setPanelContent("About this site", 'img/global.jpg', $('#about_this_site').html());
         });
 
         datacentermap.addListener('click', function(event) {
@@ -142,17 +159,11 @@ $(document).ready(function() {
             var description = event.feature.getProperty('description');
             var image = event.feature.getProperty('image');
 
-            var panel = $('#info-panel');
-            panel.find('#title').html(city);
-            panel.find('#panel-image').attr('src', image);
-            panel.find('#panel-description').html(description);
+            setPanelContent(city, image, description);
 
             map.setCenter(event.latLng);
             map.setZoom(20);
-            setTimeout(x, 500);
-            function x () {
-                $('#info-panel').addClass('slide-menu-open');
-            }
+            openInfoPanel();
         });
 
         cablemap.addListener('click', function(event) {
@@ -175,6 +186,27 @@ $(document).ready(function() {
     function toggleSubmarineCables() {
         cablemap.setMap(cablemap.getMap() ? null : map);
         landingpointmap.setMap(landingpointmap.getMap() ? null : map);
+    }
+
+    function openInfoPanel() {
+        setTimeout(x, 500);
+        function x () {
+            $('#info-panel').addClass('slide-menu-open');
+        }
+    }
+
+    function closeInfoPanel() {
+        setTimeout(x, 500);
+        function x () {
+            $('#info-panel').removeClass('slide-menu-open');
+        }
+    }
+
+    function setPanelContent(title, image, description) {
+        var panel = $('#info-panel');
+        panel_title.html(title);
+        panel_image.attr('src', image);
+        panel_description.html(description);
     }
 
     google.maps.event.addDomListener(window, 'load', InitializeBaseMap);

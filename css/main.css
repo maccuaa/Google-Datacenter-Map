@@ -10,11 +10,17 @@ html, body, .container-large {
     width: 100%;
     height: 100%;
     margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 
@@ -34,13 +40,19 @@ html, body, .container-large {
     width: 100%
 }
 
-#map-toggles button, .modal button {
+.btn, .btn-default {
     background-image: none;
     margin: 0 10px;
 }
 
 #panel-description-container {
     padding: 20px;
+    overflow: auto;
+    height: 420px;
+}
+
+.slide-menu-vertical {
+    height: 93%;
 }
 
 

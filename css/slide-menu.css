@@ -1,6 +1,7 @@
 .slide-menu {
     background: #FFFFFF;
     position: fixed;
+    overflow: hidden;
 }
 
 .slide-menu h3 {
@@ -8,6 +9,7 @@
     padding: 20px;
     margin: 0;
     font-weight: 300;
+    display: inline-block;
 }
 
 /* Orientation-dependent styles for the content of the menu */
