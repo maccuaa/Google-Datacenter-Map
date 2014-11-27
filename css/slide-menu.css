@@ -4,12 +4,10 @@
 }
 
 .slide-menu h3 {
-    color: #afdefa;
     font-size: 1.9em;
     padding: 20px;
     margin: 0;
     font-weight: 300;
-    background: #0d77b6;
 }
 
 /* Orientation-dependent styles for the content of the menu */

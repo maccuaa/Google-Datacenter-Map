@@ -39,8 +39,8 @@ html, body, .container-large {
     margin: 0 10px;
 }
 
-.scotch-panel-wrapper {
-    height: 100%;
+#panel-description-container {
+    padding: 20px;
 }
 
 

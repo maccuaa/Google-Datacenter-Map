@@ -154,6 +154,7 @@
             "properties": {
                 "city": "Hamina, Finland",
                 "description": "We had the unique opportunity to salvage an old paper mill in Hamina, Finland and use the pre-existing infrastructure to build a data center there. The large site sits on the beautiful Baltic Sea and is able to use raw sea water, piped through a pre-existing tunnel, to cool our servers naturally. After the cooling process, we dissipate the remaining heat and mix it in with more seawater before using it for cooling again.",
+                "image": "img/hamina.jpg",
                 "type": "datacenter"
             }
         },
