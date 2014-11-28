@@ -55,6 +55,11 @@ html, body, .container-large {
     height: 93%;
 }
 
+.image-source {
+    font-style: italic;
+    font-size: small;
+}
+
 
 /* ==========================================================================
    Base styles: opinionated defaults

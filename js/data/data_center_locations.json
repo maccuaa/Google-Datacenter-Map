@@ -10,6 +10,8 @@
             "properties": {
                 "city": "Lenoir, North Carolina",
                 "description": "One of the reasons Google chose the city of Lenoir, North Carolina is its roots as a factory town in the furniture industry. Since furniture mills used a lot of power, we were able to reuse much of the existing power infrastructure. Lenoir is now home to the Internet, but also to our data center employees. Because of this, we've awarded more than $350,000 in grants and provided over $2M in free advertising to local nonprofits. We've also invested in several green initiatives, including a project to turn hog waste into renewable energy.",
+                "image": "img/lenoir.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/lenoir/4",
                 "type": "datacenter"
             }
         },
@@ -22,6 +24,8 @@
             "properties": {
                 "city": "Berkeley County, South Carolina",
                 "description": "Here in Berkeley County, we’ve tried to give back more than jobs to the community. We’ve made an investment of over half a million dollars to local schools and nonprofits and introduced free Wi-Fi to downtown Goose Creek. In June 2012, we hosted Googlefest in nearby Charleston to help nonprofits, small businesses, and educators use the full range of Google’s tools.",
+                "image": "img/berkeley.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/berkeley-county/2",
                 "type": "datacenter"
             }
         },
@@ -34,6 +38,8 @@
             "properties": {
                 "city": "Douglas County, Georgia",
                 "description": "Google has been working for years to optimize our data center designs in order to minimize our environmental footprint. A good example is at our Douglas County, Georgia facility where we built a water processing facility and treatment plant in order to make sure our water usage didn’t take fresh water away from the local community.",
+                "image": "img/douglas-county.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/douglas-county/3",
                 "type": "datacenter"
             }
         },
@@ -46,6 +52,8 @@
             "properties": {
                 "city": "Mayes County, Oklahoma",
                 "description": "At our data center in Pryor, Oklahoma, we've built strong ties with the Cherokee community. We've created over 100 jobs and awarded grants to local schools to help them upgrade their equipment so students can stay ahead of the curve.",
+                "image": "img/mayes-county.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/mayes-county/2",
                 "type": "datacenter"
             }
         },
@@ -58,6 +66,8 @@
             "properties": {
                 "city": "Council Bluffs, Iowa",
                 "description": "We're always looking to improve the way we run our data centers by pursuing innovation in efficiency and quality control. Here in Council Bluffs, Iowa, we found a way to use renewable energy by purchasing power from a nearby wind farm. This helps support local green initiatives as well as shrink our footprint overall.",
+                "image": "img/council-bluffs.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/council-bluffs/2",
                 "type": "datacenter"
             }
         },
@@ -70,6 +80,8 @@
             "properties": {
                 "city": "The Dalles, Oregon",
                 "description": "Here among Oregon’s rolling hills, snow-capped peaks and brisk Columbia River, we make Google products and services available to the entire world. The Dalles data center location was chosen for its mild climate and access to hydroelectric power. Our staff has continued this green thinking by starting a community garden on one corner of the site.",
+                "image": "img/the-dalles.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/the-dalles/7",
                 "type": "datacenter"
             }
         },
@@ -82,18 +94,8 @@
             "properties": {
                 "city": "Mountain View, California",
                 "description": "Google Global HQ",
-                "type": "hq"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-74.003203, 40.741355]
-            },
-            "properties": {
-                "city": "111 Eighth Avenue, Manhatten, New York",
-                "description": "",
+                "image": "img/mountain-view.jpg",
+                "img-source": "http://en.wikipedia.org/wiki/Googleplex#mediaviewer/File:Google_Campus,_Mountain_View,_CA.jpg",
                 "type": "hq"
             }
         },
@@ -106,6 +108,8 @@
             "properties": {
                 "city": "Quilicura, Chile",
                 "description": "Chile offers an ideal combination of reliable infrastructure, a skilled workforce and a commitment to transparent and business friendly regulations. Chile also fosters an atmosphere of innovation, and in recent years has developed cutting edge policies and programs that encourage the growth of the Internet. As with all of our facilities around the world, we chose Quilicura following a thorough and rigorous site selection process.",
+                "image": "img/douglas-county2.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/douglas-county/5",
                 "type": "datacenter"
             }
         },
@@ -118,6 +122,8 @@
             "properties": {
                 "city": "St. Ghislain, Belgium",
                 "description": "St. Ghislain has the right combination of energy infrastructure and developable land. The local authorities also have a strong vision for how the Internet can bring economic benefits and jobs to the area. The Digital Innovation Valley project has created a cluster of high-tech businesses and put technology at the heart of the education system. As a result, we had a great team of people supporting investment in the area who were very helpful during our site selection process.",
+                "image": "img/st-ghislain.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/st-ghislain/3",
                 "type": "datacenter"
             }
         },
@@ -130,6 +136,8 @@
             "properties": {
                 "city": "Dublin, Ireland",
                 "description": "Google Europe HQ. Located in the heart of the historic docklands district (a.k.a. Silicon Docks), Google has helped put Dublin on the map as a technology hub in Europe. Our office is made up of thousands of Googlers from all over the world, overseeing operations for our business in Europe, the Middle East and Africa.",
+                "image": "img/dublin-hq.jpg",
+                "img-source": "http://omparchitects.com/media/filer_public/2013/04/24/1882_020d.jpg",
                 "type": "hq"
             }
         },
@@ -142,6 +150,8 @@
             "properties": {
                 "city": "Dublin, Ireland",
                 "description": "Dublin has the right combination of energy infrastructure, developable land, and available workforce for the data center. We were able to take the same approach to construction as we did in Hamina, Finland, using local engineering and construction expertise to re-develop an existing building.",
+                "image": "img/council-bluffs2.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/council-bluffs/4",
                 "type": "datacenter"
             }
         },
@@ -155,6 +165,7 @@
                 "city": "Hamina, Finland",
                 "description": "We had the unique opportunity to salvage an old paper mill in Hamina, Finland and use the pre-existing infrastructure to build a data center there. The large site sits on the beautiful Baltic Sea and is able to use raw sea water, piped through a pre-existing tunnel, to cool our servers naturally. After the cooling process, we dissipate the remaining heat and mix it in with more seawater before using it for cooling again.",
                 "image": "img/hamina.jpg",
+                "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/hamina/6",
                 "type": "datacenter"
             }
         },
@@ -167,6 +178,8 @@
             "properties": {
                 "city": "Changhua County, Taiwan",
                 "description": "Taiwan is a leading high-tech hub, with a history of supporting innovation and foreign investment, and a location right in the heart of Asia. To power its high-tech industry and thriving Internet economy, Taiwan has invested in reliable infrastructure, innovative world-class talent and a stable and accommodating regulatory environment. As with all of our facilities around the world, we chose Changhua County following a thorough and rigorous site selection process, taking many technical and other considerations into account, including location, infrastructure, workforce, reasonable business regulations and cost.",
+                "image": "img/changhua-county.jpg",
+                "img-source": "http://4.bp.blogspot.com/-TvTTr6o95zk/UqfVPWdRzBI/AAAAAAAAABs/p1Gz3WYacsA/s1600/CO6_0938.jpg",
                 "type": "datacenter"
             }
         },
@@ -179,6 +192,8 @@
             "properties": {
                 "city": "Singapore",
                 "description": "Singapore offers an ideal combination of reliable infrastructure, a skilled workforce and a commitment to transparent and business friendly regulations. Singapore also has a vibrant Internet economy and is located in the center of one of the fastest growing Internet markets in the world, Southeast Asia, where millions of users are coming online every day for information and entertainment, new business opportunities and better ways to connect with friends and family, near and far.",
+                "image": "img/singapore.jpg",
+                "img-source": "http://2.bp.blogspot.com/-jF-AyxII7kA/UqfXj5R3EHI/AAAAAAAAACI/RsNXlIZNdMU/s1600/9299.jpg",
                 "type": "datacenter"
             }
         }

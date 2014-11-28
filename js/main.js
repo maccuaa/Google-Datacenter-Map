@@ -23,12 +23,13 @@ $(document).ready(function() {
     var panel = $('#info-panel');
     var panel_title = panel.find('#title');
     var panel_image = panel.find('#panel-image');
+    var panel_image_source = panel.find("#panel-image-source");
     var panel_description = panel.find('#panel-description');
 
     function InitializeBaseMap () {
         var mapOptions = {
             center: default_map_center,
-            zoom: 3,
+            zoom: default_map_zoom,
             mapTypeId: google.maps.MapTypeId.TERRAIN,
             panControl: false,
             zoomControl: true,
@@ -39,8 +40,6 @@ $(document).ready(function() {
         };
 
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-        setPanelContent("About this site", 'img/global.jpg', $('#about_this_site').html());
 
         LoadDataCenterMarkers();
 
@@ -147,10 +146,19 @@ $(document).ready(function() {
         });
 
         $("#map_reset").click(function() {
-            map.setCenter(default_map_center);
-            map.setZoom(default_map_zoom);
-            closeInfoPanel();
-            setPanelContent("About this site", 'img/global.jpg', $('#about_this_site').html());
+            if ($("#info-panel").hasClass('slide-menu-open')) {
+                closeInfoPanel();
+                setTimeout(function() {
+                   resetMap();
+                }, 500);
+            }
+            else {
+                resetMap();
+            }
+        });
+
+        $("#panel_close").click(function() {
+            $("#info-panel").removeClass('slide-menu-open');
         });
 
         datacentermap.addListener('click', function(event) {
@@ -158,8 +166,9 @@ $(document).ready(function() {
             var city = event.feature.getProperty('city');
             var description = event.feature.getProperty('description');
             var image = event.feature.getProperty('image');
+            var source = event.feature.getProperty('img-source');
 
-            setPanelContent(city, image, description);
+            setPanelContent(city, image, source, description);
 
             map.setCenter(event.latLng);
             map.setZoom(20);
@@ -189,24 +198,26 @@ $(document).ready(function() {
     }
 
     function openInfoPanel() {
-        setTimeout(x, 500);
-        function x () {
+        setTimeout(function() {
             $('#info-panel').addClass('slide-menu-open');
-        }
+        }, 500);
     }
 
     function closeInfoPanel() {
-        setTimeout(x, 500);
-        function x () {
-            $('#info-panel').removeClass('slide-menu-open');
-        }
+        $('#info-panel').removeClass('slide-menu-open');
     }
 
-    function setPanelContent(title, image, description) {
+    function setPanelContent(title, image, source, description) {
         var panel = $('#info-panel');
         panel_title.html(title);
         panel_image.attr('src', image);
+        panel_image_source.attr('href', source);
         panel_description.html(description);
+    }
+
+    function resetMap() {
+        map.setCenter(default_map_center);
+        map.setZoom(default_map_zoom);
     }
 
     google.maps.event.addDomListener(window, 'load', InitializeBaseMap);
