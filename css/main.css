@@ -18,6 +18,11 @@ html, body, .container-large {
     margin-right: 0;
 }
 
+.btn, .btn-default {
+    background-image: none;
+    margin: 0 10px;
+}
+
 .no-gutter > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
@@ -37,25 +42,39 @@ html, body, .container-large {
 #map-toggles {
     text-align: center;
     padding: 10px;
-    width: 100%
+    width: 100%;
+    background-color: #35393f;
+    color: #FFF;
 }
 
-.btn, .btn-default {
-    background-image: none;
-    margin: 0 10px;
+#info-panel {
+    background-color: #35393f;
+    color: #FFF;
 }
 
-#panel-description-container {
+#info-panel #panel_close {
+    color: #FFF;
+}
+
+#info-panel #title {
+    color: #ff6600;
+}
+
+#info-panel #panel-description-container {
     padding: 20px;
     overflow: auto;
-    height: 420px;
+    height: 50%;
 }
 
 .slide-menu-vertical {
     height: 93%;
 }
 
-.image-source {
+#info-panel #panel-image {
+    max-height: 300px;
+}
+
+#info-panel .image-source {
     font-style: italic;
     font-size: small;
 }

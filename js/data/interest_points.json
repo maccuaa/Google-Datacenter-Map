@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.7667542,
+          60.6832664
+        ]
+      },
+      "properties": {
+        "city": "Ramsnäs, Sweden",
+        "type": "windfarm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.732082,
+          66.949283
+        ]
+      },
+      "properties": {
+        "city": "Pajala, Sweden",
+        "type": "windfarm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5919419,
+          60.8347541
+        ]
+      },
+      "properties": {
+        "city": "Övertorneå, Sweden",
+        "type": "windfarm"
+      }
+    }
+  ]
+}
