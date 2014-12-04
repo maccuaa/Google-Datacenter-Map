@@ -29,6 +29,7 @@ $(document).ready(function() {
     var panel_desc_climate = panel.find('#climate');
     var panel_desc_government = panel.find('#government');
     var panel_desc_economy = panel.find('#economy');
+    var panel_desc_network = panel.find("#network");
 
     function InitializeBaseMap () {
         var mapOptions = {
@@ -172,11 +173,12 @@ $(document).ready(function() {
             var climate = event.feature.getProperty('climate');
             var energy = event.feature.getProperty('energy');
             var economy = event.feature.getProperty('economy');
+            var network = event.feature.getProperty('network');
             var government = event.feature.getProperty('government');
             var image = event.feature.getProperty('image');
             var source = event.feature.getProperty('img-source');
 
-            setPanelContent(city, image, source, intro, climate, energy, economy, government);
+            setPanelContent(city, image, source, intro, climate, energy, economy, network, government);
 
             map.setCenter(event.latLng);
             map.setZoom(20);
@@ -215,7 +217,7 @@ $(document).ready(function() {
         $('#info-panel').removeClass('slide-menu-open');
     }
 
-    function setPanelContent(title, image, source,  intro, climate, energy, economy, government) {
+    function setPanelContent(title, image, source,  intro, climate, energy, economy, network, government) {
         var panel = $('#info-panel');
         panel_title.html(title);
         panel_image.attr('src', image);
@@ -244,6 +246,14 @@ $(document).ready(function() {
         }
         else {
             panel_desc_economy.parent().parent().hide();
+        }
+
+        panel_desc_network.html(network);
+        if (network !== undefined) {
+            panel_desc_network.parent().parent().show();
+        }
+        else {
+            panel_desc_network.parent().parent().hide();
         }
 
         panel_desc_government.html(government);

@@ -5,7 +5,7 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-81.547383, 35.89855]
+                "coordinates": [-81.54714, 35.900059]
             },
             "properties": {
                 "city": "Lenoir, North Carolina",
@@ -75,7 +75,7 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-121.202267, 45.632511]
+                "coordinates": [-121.2005248, 45.6304076]
             },
             "properties": {
                 "city": "The Dalles, Oregon",
@@ -89,15 +89,14 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-71.059484, -34.452218]
+                "coordinates": [-70.736569, -33.36673]
             },
             "properties": {
                 "city": "Quilicura, Chile",
-                "intro": "Google&#39;s datacenter in Quilicura will be its <a href='http://www.google.ca/about/datacenters/inside/locations/quilicura/'>first</a> in Latin America.  The city was chosen over other bigger latin american cities <a href='http://techcrunch.com/2012/09/07/google-chooses-chile-for-its-first-latin-american-data-center/'>due</a> to its skilled workforce and the Chilean goverments focus on start-ups and technology.",
-                "climate": "Due to its length, Chile has a varied climate.  From temperate desert in the north, to Mediterranean in the centre, and cool and damp in the south.  Quilicura is located in the south of Chile where it is cooler.  While <a href='http://www.preventionweb.net/english/countries/statistics/?cid=35'>most</a> of Chile&#39;s natural disasters have been floods, it is also at a <a href='http://earthquake.usgs.gov/earthquakes/world/chile/gshap.php'>fairly high</a> of earthquakes.",
-                "energy": "Historically, hydro-electric dams have provided the bulk of Chile&#39;s power.  Recently however, droughts have caused blackouts and outages so the goverment has started diversifying into natural-gas-fired power plants. The Ralco plant situated on the Biobio River is the largest hydro dam in the region and provides 570 MW of power.",
-                "government": "Chile has a <a href='http://www.google.ca/about/datacenters/inside/locations/quilicura/'>skilled workforce</a> and a  progressive government with a commitment to transparent and business friendly regulations.",
-                "economy": "In South American countries, Chile has the <a href='http://www.heritage.org/index/country/chile'>highest</a> degree of economic freedom and was the region&#39;s <a href='http://www.oecd.org/chile/chilesaccessiontotheoecd.htm'>first</a> country to join the OECD.",
+                "intro": "Google&#39;s datacenter in Quilicura will be its first in Latin America.  The city was chosen over other bigger latin american cities due to its skilled workforce and the Chilean goverments focus on start-ups and technology.",
+                "climate": "Due to its length, Chile has a varied climate.  From temperate desert in the north, to Mediterranean in the centre, and cool and damp in the south.  Quilicura is located in the south of Chile where it is cooler.  While most of Chile&#39;s natural disasters have been floods, it is also at a fairly high risk of earthquakes.<sup>1, 2</sup><br /><sup>1</sup> <a href='http://www.preventionweb.net/english/countries/statistics/?cid=35'>Prevention Web</a><br /><sup>2</sup> <a href='http://earthquake.usgs.gov/earthquakes/world/chile/gshap.php'>USGS</a>",
+                "government": "Chile has a skilled workforce and a  progressive government with a commitment to transparent and business friendly regulations.<sup>1</sup><br /><sup>1</sup> <a href='http://techcrunch.com/2012/09/07/google-chooses-chile-for-its-first-latin-american-data-center/'>Google Chooses Chile For Its First Latin American Data Center</a>",
+                "economy": "In South American countries, Chile has the highest degree of economic freedom and was the region&#39;s first country to join the OECD.<sup>1, 2</sup><br /><sup>1</sup> <a href='http://www.heritage.org/index/country/chile'>2014 Index of Economic Freedom</a><br /><sup>2</sup> <a href='http://www.oecd.org/chile/chilesaccessiontotheoecd.htm'>OECD</a>",
                 "image": "img/douglas-county2.jpg",
                 "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/douglas-county/5",
                 "type": "datacenter"
@@ -107,15 +106,13 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [3.8547128, 50.4750956]
+                "coordinates": [3.867492, 50.4727361]
             },
             "properties": {
                 "city": "St. Ghislain, Belgium",
                 "intro": "Google&#39;s datacenter in mainland Belgium, is situated in the small town of St. Ghislain.  It is considered to be one if Google&#39;s most efficient data centers as it was built next to an industrial canal in order for it to use the water to cool its servers.",
-                "climate": "Part of mainland Europe, St. Ghislain <a href='https://www.cia.gov/library/publications/the-world-factbook/geos/be.html'>enjoys</a> mild winters and cool summers.  Belgium suffers <a href='http://www.preventionweb.net/english/countries/statistics/?cid=17'>relatively few</a> natural disasters, the most common being storms and flooding, and has a <a href='http://earthquake.usgs.gov/earthquakes/world/belgium/gshap.php'>low</a> risk of earthquakes.",
-                "energy": "Google&#39;s data center in St. Ghislain is considered to be one its most efficient.  This is due to the fact that they built the facility to run without the use of <a href='http://www.datacenterknowledge.com/archives/2013/04/10/google-invests-300m-euros-to-expand-mega-efficient-belgium-facility/'>chillers</a>, refridgerators used to chill water to cool the servers.  The facility is “<a href='http://www.datacenterknowledge.com/archives/2013/04/10/google-invests-300m-euros-to-expand-mega-efficient-belgium-facility/'>water self-sufficient</a>,” as it is draws water from a nearby industrial canal and has built a 20,000-square-foot water treatment plant  to prepare the canal water for use in the data center.",
-                "government": "Belgium boasts a stable and democratic government, low crime rates, and one of the highest post-secondary education levels in the <a href='http://www3.weforum.org/docs/WEF_GlobalCompetitivenessReport_2013-14.pdf'>world</a>.",
-                "economy": "Belgium has a modern, open, and private-enterprise-based economy.  It has <a href='https://www.cia.gov/library/publications/the-world-factbook/geos/be.html'>taken advantage</a> of its central geographic location, highly developed transport network, and diversified industrial and commercial base.",
+                "climate": "Part of mainland Europe, St. Ghislain enjoys mild winters and cool summers.<sup>1</sup>  Belgium suffers relatively few natural disasters, the most common being storms and flooding, and has a low risk of earthquakes.<sup>2, 3</sup><br /><sup>1</sup> <a href='https://www.cia.gov/library/publications/the-world-factbook/geos/be.html'>CIA Factbook</a><br /><sup>2</sup> <a href='http://www.preventionweb.net/english/countries/statistics/?cid=17'>Prevention Web</a><br /><sup>3</sup> <a href='http://earthquake.usgs.gov/earthquakes/world/belgium/gshap.php'>USGS</a>",
+                "energy": "Google&#39;s data center in St. Ghislain is considered to be one its most efficient.  This is due to the fact that they built the facility to run without the use of chillers, refridgerators used to chill water to cool the servers.  The facility is “water self-sufficient,” as it is draws water from a nearby industrial canal and has built a 20,000-square-foot water treatment plant  to prepare the canal water for use in the data center<sup>1</sup>.<br /><sup>1</sup> <a href='http://www.datacenterknowledge.com/archives/2013/04/10/google-invests-300m-euros-to-expand-mega-efficient-belgium-facility/'>Google Invests $390 Million to Expand Belgium Facility</a>",
                 "image": "img/st-ghislain.jpg",
                 "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/st-ghislain/3",
                 "type": "datacenter"
@@ -130,10 +127,9 @@
             "properties": {
                 "city": "Dublin, Ireland",
                 "intro": "Google&#39;s datacenter in west Dublin is its second installation in Ireland.  In addition to its European Headquarters, the datacenter boasts an advanced air-cooling system that takes advantage of Ireland’s weather to keep its servers running smoothly.",
-                "climate": "Due to its location off the coast of the United Kingdom and being right on the Atlantic Ocean, Ireland has a <a href='https://www.cia.gov/library/publications/the-world-factbook/geos/ei.html'>temperate maritime</a> climate with mild winters and cool summers that are consistently humid.  In addition, Ireland has very few natural disasters <a href='http://earthquake.usgs.gov/earthquakes/world/ireland/gshap.php'>very low</a> chance of earthquakes.",
-                "energy": "Google&#39;s Dublin datacenter is also considered to be one of its most efficient.  Google has <a href='http://www.google.ca/about/datacenters/inside/locations/dublin/'>drastically</a> reduced its cooling costs by using the cool sea air blowing in off the coast to chill its servers.",
-                "government": "In the past, Ireland has had its fair share of internal political tensions. More recently however, tensions have simmered and now enjoys a fairly stable democracy.  In addition it is highly educated and 40% of the population resides within 100 km of Dublin.",
-                "economy": "Ireland is a small, modern, trade-dependent econom and today <a href='https://www.cia.gov/library/publications/the-world-factbook/rankorder/2004rank.html?countryName=Ireland&amp;countryCode=ei&amp;regionCode=eur&amp;rank=27#ei'>ranks</a> amongst the wealthiest countries in the world in terms of GDP per capita.  Thanks to <a href='http://www.datacenterknowledge.com/archives/2013/04/08/dublin-free-cooling/'>large investements</a> from multi-national corporations (such as Google, Microsoft and Amazon all building datacenters on the isle), Ireland has pulled itself out of its 2008 recession.",
+                "climate": "Due to its location off the coast of the United Kingdom and being right on the Atlantic Ocean, Ireland has a temperate maritime climate with mild winters and cool summers that are consistently humid.<sup>1</sup>  In addition, Ireland has very few natural disasters very low chance of earthquakes.<sup>2</sup><br /><sup>1</sup> <a href='https://www.cia.gov/library/publications/the-world-factbook/geos/ei.html'>CIA Factbook</a><br /><sup>2</sup> <a href='http://earthquake.usgs.gov/earthquakes/world/ireland/gshap.php'>USGS</a>",
+                "energy": "Google&#39;s Dublin datacenter is also considered to be one of its most efficient.  Google has drastically reduced its cooling costs by using the cool sea air blowing in off the coast to chill its servers.<sup>1</sup><br /><sup>1</sup> <a href='http://www.google.ca/about/datacenters/inside/locations/dublin/'>Google</a>",
+                "economy": "Ireland is a small, modern, trade-dependent econom and today ranks amongst the wealthiest countries in the world in terms of GDP per capita.<sup>1</sup>  Thanks to large investements from multi-national corporations (such as Google, Microsoft and Amazon all building datacenters on the isle), Ireland has pulled itself out of its 2008 recession.<sup>2</sup><br /><sup>1</sup> <a href='https://www.cia.gov/library/publications/the-world-factbook/rankorder/2004rank.html?countryName=Ireland&amp;countryCode=ei&amp;regionCode=eur&amp;rank=27#ei'>CIA Factbook</a><br /><sup>2</sup> <a href='http://www.datacenterknowledge.com/archives/2013/04/08/dublin-free-cooling/'>In Dublin, Cool Climate Fuels Cloud Computing Cluster</a>",
                 "image": "img/council-bluffs2.jpg",
                 "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/council-bluffs/4",
                 "type": "datacenter"
@@ -147,11 +143,9 @@
             },
             "properties": {
                 "city": "Hamina, Finland",
-                "intro": "Google&#39;s data center in Finland was built inside an old paper mill situated just outside the small town of Hamina, on the coast of the Baltic Sea.  One of the unique features of the site is that raw sea water is piped through the an existing tunnel to cool all of the servers naturally.  The location was chosen for a variety of other reasons.",
-                "climate": "As it is in the Arctic Circle, Finland has a cold temperate <a href='https://www.cia.gov/library/publications/the-world-factbook/geos/fi.html'>climate</a> that is potentially subarctic but comparatively mild because of moderating influence of the North Atlantic Current, Baltic Sea, and more than 60,000 lakes.  In addtion, in the past 30 years, Finland has <a href='http://www.preventionweb.net/english/countries/statistics/?cid=61'>very rarely</a> suffered any natural disasters and has a <a href='http://earthquake.usgs.gov/earthquakes/world/finland/gshap.php'>very low</a> risk of earthquakes.",
-                "energy": "The Hamina data center is one of the most enery efficient data centers in the world.  In January 2014, Google <a href='http://www.datacenterknowledge.com/archives/2014/01/23/google-buys-swedish-wind-power-finnish-data-center/'>announced</a> that it had bought the entire electricity output of 4 new wind farms being built in Sweden.  This is the second wind farm energy deal in Sweden that Google has annouced.  In 2013 it <a href='http://www.datacenterknowledge.com/archives/2013/06/04/googles-powering-finnish-data-center-with-swedish-wind-farm/'>bought</a> the ten-year output of a new wind farm in Ramsnäs in order to offset the carbon costs of running its data center.  The moved helped cement Google&#39;s green energy claims while at the same time protecting it from future increases in energy prices.",
-                "government": "Finland boasts a stable and democratic government, low crime rates, and one of the highest post-secondary education levels in the <a href='http://www3.weforum.org/docs/WEF_GlobalCompetitivenessReport_2013-14.pdf'>world</a>.",
-                "economy": "A highly industrialized, largely free-market economy with a lively technology export market.",
+                "intro": "Google's data center in Finland was built inside an old paper mill situated just outside the small town of Hamina, on the coast of the Baltic Sea.  Compared to its data centers in the Asia-Pacific region, where locations are based on their political climate and network infrastructure, Finland was chosen for its cool climate and geographic stability.  Finland is cold. In July, it averages 13 - 17 degrees celcius. From an energy consumption standpoint this makes it an ideal location to run a datacenter and keep thousands of servers from overheating without having to spend a fortune on cooling costs. For Google, a fortune is measure in the hundreds of millions of dollars.  One of the unique features of the Hamina site is that raw sea water is piped through one of the paper mill's existing tunnels to cool all of the servers in the data center naturally.",
+                "climate": "As it is in the Arctic Circle, Finland has a cold, temperate climate that is potentially subarctic but at the same time, comparatively mild due to the moderating influence of the North Atlantic Current, Baltic Sea, and more than 60,000 lakes.  In other words, it's cold but not too cold.  In addtion, in the past 30 years, Finland has very rarely suffered any natural disasters and has a very low risk of earthquakes, making it an ideal location to invest $340 million to build a data center.",
+                "energy": "The Hamina data center is one of the most enery efficient data centers in the world.  In January 2014, Google announced that it had bought the entire electricity output of 4 new wind farms being built in Sweden to power its Finnish data center. This was the second wind farm energy deal in Sweden that Google has annouced.  In 2013, Google announced that it had bought the entire ten-year output of a new wind farm in Ramsnäs in order to offset the carbon costs of running its Hamina data center. The move helped cement Google's green energy claims while at the same time protecting it from future increases in energy prices.",
                 "image": "img/hamina.jpg",
                 "img-source": "http://www.google.ca/about/datacenters/gallery/index.html#/locations/hamina/6",
                 "type": "datacenter"
@@ -161,11 +155,14 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [120.46589799999998, 23.991936]
+                "coordinates": [120.4280087, 24.1399584]
             },
             "properties": {
                 "city": "Changhua County, Taiwan",
-                "description": "Taiwan is a leading high-tech hub, with a history of supporting innovation and foreign investment, and a location right in the heart of Asia. To power its high-tech industry and thriving Internet economy, Taiwan has invested in reliable infrastructure, innovative world-class talent and a stable and accommodating regulatory environment. As with all of our facilities around the world, we chose Changhua County following a thorough and rigorous site selection process, taking many technical and other considerations into account, including location, infrastructure, workforce, reasonable business regulations and cost.",
+                "intro": "Changhua County is the home of Google's largest datacenter in the Asia-Pacific region.  It was chosen because of its reputation as a high-tech hub, strong support of foreign investment, and its location right in the heart of Asia.  One of the unique features of this facility is its use of a nighttime cooling and thermal energy storage system.  It works by cooling the water stored in its storage tanks at night when the air is cooler, and then uses that cool water during the day to cool its servers when the temperatures are hotter.  From the heat map you can see that Google receives a lot of traffic from Japan, China, South Korea, Taiwan, Malaysia and Singapore. Taiwan was chosen over these other countries (except the Singapore) for a variety of reasons.",
+                "network": "Taiwan is one of the regions most advanced countries in terms of technology.   The country has a well developed network infrastructure that can handle the large amount of traffic the data center needs to process.",
+                "government": "The government of Taiwain is very to open foreign investment and does not impose strict restrictions on transnational companies that wish to set up shop within its borders.  They also do not attempt to censor any of Google's services or traffic as is the case with China which sits on the other side of the Taiwan Strait 180km away.  China plays a large role in determining where Google places its datacenters in the Asia-Pacific region due to its large population and the traffic they generate.  When Google was first planning its expansion into the region it had planned to build a datacenter in Hong Kong along with the one's in Taiwan and Singapore however that plan was later cancelled.  The relationship between the US based Google and China has gone through many ups and downs due to China's tight grip on the flow information in the country and often blocks or restricts access to Google's services. Up to date information on the status of Google's services in China (and around the world) can be seen [here](http://www.google.com/transparencyreport/traffic/#expand=CN).",
+                "economy": "Although Taiwan's poulation ranks 52nd in the world in size, its economy ranks 21st thanks to its high tech industry.  It is one of the Four Asian Tigers, and is a member of the WTO and APEC.  In addition the regulatory environment of Taiwan is  very stable and accomadating which means Google doesn't have to worry about new laws coming into effect that could, in effect, jeapordize its operations and investments in the country.  The cost of living in Taiwan is also low which perhaps also played a factor in Google choosing Taiwan over other countries such as Japan where the cost of living is much higher.  This is an an important factor as it lowers the cost of operating the data center.",
                 "image": "img/changhua-county.jpg",
                 "img-source": "http://4.bp.blogspot.com/-TvTTr6o95zk/UqfVPWdRzBI/AAAAAAAAABs/p1Gz3WYacsA/s1600/CO6_0938.jpg",
                 "type": "datacenter"
@@ -175,14 +172,30 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [103.84540900000002, 1.314663]
+                "coordinates": [103.707967, 1.352406]
             },
             "properties": {
                 "city": "Singapore",
-                "description": "Singapore offers an ideal combination of reliable infrastructure, a skilled workforce and a commitment to transparent and business friendly regulations. Singapore also has a vibrant Internet economy and is located in the center of one of the fastest growing Internet markets in the world, Southeast Asia, where millions of users are coming online every day for information and entertainment, new business opportunities and better ways to connect with friends and family, near and far.",
+                "description": "Although it is a small island on the souther tip of Malaysia, Singapore is one of the worlds major commercial hubs boasting the worlds fourth-largest financial centre which  houses some of the worlds largest banks, businesses and stock exchanges.  It is also a huge shipping and logistics hub with one of the five busiest ports in the world.  Singapore is a highly modern city-state located in the fastest-growing market for Internet users in the world. It's advanced infrastructure and economy make it an ideal location for Google to build a data center.",
+                "network": "Singapore would not be the global commercial hub today if it wasn't one of the worlds most well-connected countries. The South-East Asia Japan Cable (SJC) is an undersea fiber optic cable that is jointly owned by Google that connects 7 countries in South East Asia. It provides 28 Tbps (Terabits per second) of bandwidth and its landing point in Singapore is only a few blocks away from Google's data center.  The SJC cable is just 1 of 28 undersea fiber optic cables that come into Singapore and provide it with lightning fast network communications connecting it to other major cities around the world. By comparison, Canada has 6 undersea cables connecting it to other countries. <br /> One of the other landing points of the SJC cable is Chikura Japan, which from the map, you can see is the landing point of 2 other Google-owned undersea fiber optic cables, Unity and FASTER.  The FASTER cable will be a 60 Tbps fiber cable connecting the US West coast to Japan in 2016.  On the US side, one of FASTER's landing points is Bandon, Oregon, the same state that houses Google's The Dalles datacenter.  The Unity cable is a 7.68 Tbps fiber cable that also connects Japan to the US West coast, this one landing in Redondo Beach, California.  It is worth noting that Google's world wide headquarters is located on the US west coast in Mountain View, California, just outside San Francisco.",
+                "economy": "Singapore has a highly developed and successful free-market economy.  It  has the highest trade-to-GDP ratio in the world at 407.9% and along with Taiwan, is one of Asia's four original Asian Tigers.  It is the 14th largest exporter and the 15th largest importer in the world.  Remarkable for a country of just 5.5 million.  It boasts an open and corruption-free environment, stable prices, and a per capita GDP higher than that of most developed countries.  Like Taiwan, this means that Google can feel comforatble operating its data centers in Singapore without worrying about eapordizing its operations and investments in the country.",
                 "image": "img/singapore.jpg",
                 "img-source": "http://2.bp.blogspot.com/-jF-AyxII7kA/UqfXj5R3EHI/AAAAAAAAACI/RsNXlIZNdMU/s1600/9299.jpg",
                 "type": "datacenter"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-122.085661, 37.421682]
+            },
+            "properties": {
+                "city": "Mountain View, California",
+                "description": "Google Global HQ",
+                "image": "img/mountain-view.jpg",
+                "img-source": "http://en.wikipedia.org/wiki/Googleplex#mediaviewer/File:Google_Campus,_Mountain_View,_CA.jpg",
+                "type": "hq"
             }
         }
     ]

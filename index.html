@@ -74,6 +74,14 @@
                                 <p id="government"></p>
                             </div>
                         </div>
+                        <div class="row no-gutter">
+                            <div class="col-md-2">
+                                <img src="img/network.png">
+                            </div>
+                            <div class="col-md-10">
+                                <p id="network"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,41 +99,43 @@
             Map Button Toggles
 
             =============================================================================================================-->
-            <div class="row no-gutter" id="map-toggles">
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-default" id="heatmap_toggle">Toggle Heatmap</button>
-                    <button type="button" class="btn btn-default" id="cablemap_toggle">Toggle Undersea Cables</button>
-                </div>
-            <!--=============================================================================================================
+            <div class="navbar navbar-default navbar-fixed-bottom" id="map-toggles">
+                <div class="container-fluid">
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-default" id="heatmap_toggle">Toggle Heatmap</button>
+                        <button type="button" class="btn btn-default" id="cablemap_toggle">Toggle Undersea Cables</button>
+                    </div>
+                    <!--=============================================================================================================
 
-            Map Legend
+                    Map Legend
 
-            =============================================================================================================-->
-                <div class="col-md-4">
-                    <div class="col-md-6">
-                        <div>
-                            <b>Headquarters : </b>
-                            <img id="hq-icon" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" class="img-rounded" />
+                    =============================================================================================================-->
+                    <div class="col-md-4">
+                        <div class="col-md-6">
+                            <div>
+                                <b>Headquarters : </b>
+                                <img id="hq-icon" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" class="img-rounded" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <b>Datacenter : </b>
+                                <img id="datacenter-icon" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" class="img-rounded" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div>
-                            <b>Datacenter : </b>
-                            <img id="datacenter-icon" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" class="img-rounded" />
+                    <!--=============================================================================================================
+
+                    Panel Controls
+
+                    =============================================================================================================-->
+                    <div class="col-md-4">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default" id="panel_toggle">Toggle Info Panel</button>
                         </div>
-                    </div>
-                </div>
-                <!--=============================================================================================================
-
-                Panel Controls
-
-                =============================================================================================================-->
-                <div class="col-md-4">
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-default" id="panel_toggle">Toggle Info Panel</button>
-                    </div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-default" id="map_reset">Reset Map</button>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default" id="map_reset">Reset Map</button>
+                        </div>
                     </div>
                 </div>
             </div>
