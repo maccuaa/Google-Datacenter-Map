@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Google's Global Connection</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/slide-menu.css">
+        <link rel="stylesheet" href="css/map.css">
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <div class="container container-large">
+            <!--========================================================================================================
+
+            Info Panel
+
+            =========================================================================================================-->
+            <div class="slide-menu slide-menu-vertical slide-menu-right" id="info-panel">
+                <div class="row no-gutter text-center">
+                    <div class="col-md-12">
+                        <div class="modal-header">
+                            <button id="panel_close" type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="title">Google's Global Connections</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-md-12 text-center">
+                        <img id="panel-image" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-md-12 text-center">
+                        <a href="https://github.com/st-andrew/GEOG-2200" target="_blank" class="image-source" id="panel-image-source">Source</a>
+                    </div>
+                </div>
+                <div class="row no-gutter" id="panel-description-container">
+                    <div class="col-md-12">
+                        <!--========================================================================================================
+
+                        Introduction
+
+                        =========================================================================================================-->
+                        <div class="row no-gutter">
+                            <div class="col-md-12">
+                                <p id="intro"></p>
+                            </div>
+                        </div>
+
+                        <!--========================================================================================================
+
+                        Energy
+
+                        =========================================================================================================-->
+                        <div class="row no-gutter">
+                            <div class="col-md-2">
+                                <img src="img/powerplant.png">
+                            </div>
+                            <div class="col-md-10">
+                                <p id="energy"></p>
+                            </div>
+                        </div>
+
+                        <!--========================================================================================================
+
+                        Climate
+
+                        =========================================================================================================-->
+                        <div class="row no-gutter">
+                            <div class="col-md-2">
+                                <img src="img/snowy-2.png">
+                            </div>
+                            <div class="col-md-10">
+                                <p id="climate"></p>
+                            </div>
+                        </div>
+
+                        <!--========================================================================================================
+
+                        Economy
+
+                        =========================================================================================================-->
+                        <div class="row no-gutter">
+                            <div class="col-md-2">
+                                <img src="img/bank.png">
+                            </div>
+                            <div class="col-md-10">
+                                <p id="economy"></p>
+                            </div>
+                        </div>
+
+                        <!--========================================================================================================
+
+                        Government
+
+                        =========================================================================================================-->
+                        <div class="row no-gutter">
+                            <div class="col-md-2">
+                                <img src="img/congress.png">
+                            </div>
+                            <div class="col-md-10">
+                                <p id="government"></p>
+                            </div>
+                        </div>
+
+                        <!--========================================================================================================
+
+                        Network
+
+                        =========================================================================================================-->
+                        <div class="row no-gutter">
+                            <div class="col-md-2">
+                                <img src="img/network.png">
+                            </div>
+                            <div class="col-md-10">
+                                <p id="network"></p>
+                            </div>
+                        </div>
+
+                        <!--========================================================================================================
+
+                        Geography
+
+                        =========================================================================================================-->
+                        <div class="row no-gutter">
+                            <div class="col-md-2">
+                                <img src="img/tornado-2.png">
+                            </div>
+                            <div class="col-md-10">
+                                <p id="geography"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--========================================================================================================
+
+            Google Map Canvas
+
+            =========================================================================================================-->
+            <div class="row no-gutter" id="map-container">
+                <div class="col-md-12" id="map-canvas"></div>
+            </div>
+
+            <!--=============================================================================================================
+
+            Map Button Toggles
+
+            =============================================================================================================-->
+            <div class="navbar navbar-default navbar-fixed-bottom" id="map-toggles">
+                <div class="container-fluid">
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-default" id="heatmap_toggle">Toggle Heatmap</button>
+                        <button type="button" class="btn btn-default" id="interest_toggle">Toggle Interest Points</button>
+                    </div>
+                    <!--=============================================================================================================
+
+                    Map Legend
+
+                    =============================================================================================================-->
+                    <div class="col-md-4">
+                        <div class="col-md-6">
+                            <div>
+                                <b>Headquarters : </b>
+                                <img id="hq-icon" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" class="img-rounded" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <b>Datacenter : </b>
+                                <img id="datacenter-icon" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" class="img-rounded" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--=============================================================================================================
+
+                    Panel Controls
+
+                    =============================================================================================================-->
+                    <div class="col-md-4">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default" id="panel_toggle">Toggle Info Panel</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default" id="map_reset">Reset Map</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="img/windturbine.png" class="hidden" id="wind-icon"/>
+
+        <!--=============================================================================================================
+
+        Javascripts
+
+        =============================================================================================================-->
+        <!-- TODO: Uncomment me when going live. Delete second api reference -->
+        <!--<script type="text/javascript"-->
+                <!--src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization&key=AIzaSyBKVUvzmplAGo-7zOlRy9zE5DfKsw0-Rok">-->
+        <!--</script>-->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+
+        <script src="js/vendor/jquery-2.1.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- TODO: Uncomment me when going live -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--<script>-->
+            <!--(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=-->
+            <!--function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;-->
+            <!--e=o.createElement(i);r=o.getElementsByTagName(i)[0];-->
+            <!--e.src='//www.google-analytics.com/analytics.js';-->
+            <!--r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));-->
+            <!--ga('create','UA-XXXXX-X');ga('send','pageview');-->
+        <!--</script>-->
+    </body>
+</html>

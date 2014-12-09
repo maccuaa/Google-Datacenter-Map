@@ -42,6 +42,20 @@
         "city": "Övertorneå, Sweden",
         "type": "windfarm"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.7974581,
+          53.3783873
+        ]
+      },
+      "properties": {
+        "city": "Delfzijl, Netherlands",
+        "type": "windfarm"
+      }
     }
   ]
 }

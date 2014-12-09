@@ -2,10 +2,7 @@ $.google = google;
 
 $(document).ready(function() {
 
-    // TODO - Differentiate between planned and current google data centers
-    // TODO - Add Netherlands datacenter
-
-    var map, heatmap, cablemap, datacentermap, landingpointmap;
+    var map, heatmap, cablemap, datacentermap, landingpointmap, interestpoints;
     var google = $.google;
 
     var default_map_center = new google.maps.LatLng(37.7047713, 2.0497792);
@@ -30,6 +27,7 @@ $(document).ready(function() {
     var panel_desc_government = panel.find('#government');
     var panel_desc_economy = panel.find('#economy');
     var panel_desc_network = panel.find("#network");
+    var panel_desc_geography = panel.find("#geography");
 
     function InitializeBaseMap () {
         var mapOptions = {
@@ -49,6 +47,8 @@ $(document).ready(function() {
         LoadDataCenterMarkers();
 
         LoadSubmarineCableData();
+
+        LoadInterestPoints();
 
         LoadLandingPoints();
 
@@ -111,6 +111,30 @@ $(document).ready(function() {
         datacentermap.setMap(map);
     }
 
+    function LoadInterestPoints() {
+        interestpoints = new google.maps.Data();
+        interestpoints.loadGeoJson('js/data/interest_points.json');
+        interestpoints.setStyle(function(feature) {
+            var title = feature.getProperty('city');
+
+            var marker_type = feature.getProperty('type');
+            var icon;
+
+            switch (marker_type){
+                case 'windfarm':
+                    icon = $("#wind-icon").attr('src');
+                    break;
+                default:
+                    icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+            }
+
+            return {
+                title: title,
+                icon: icon
+            };
+        });
+    }
+
     function LoadSubmarineCableData () {
         cablemap = new google.maps.Data();
         cablemap.loadGeoJson('js/data/submarine-cables.json');
@@ -142,8 +166,8 @@ $(document).ready(function() {
             toggleHeatmap();
         });
 
-        $('#cablemap_toggle').click(function() {
-            toggleSubmarineCables();
+        $('#interest_toggle').click(function() {
+            toggleInterestMap();
         });
 
         $("#panel_toggle").click(function() {
@@ -177,11 +201,27 @@ $(document).ready(function() {
             var government = event.feature.getProperty('government');
             var image = event.feature.getProperty('image');
             var source = event.feature.getProperty('img-source');
+            var geography = event.feature.getProperty('geography');
 
-            setPanelContent(city, image, source, intro, climate, energy, economy, network, government);
+            setPanelContent(city, image, source, intro, climate, energy, economy, network, government, geography);
 
-            map.setCenter(event.latLng);
-            map.setZoom(20);
+            switch (city) {
+                case "Hamina, Finland":
+                    interestpoints.setMap(map);
+                    map.setCenter({lat:64.18, lng: 23.9});
+                    map.setZoom(5);
+                    break;
+                case "Eemshaven, The Netherlands":
+                    interestpoints.setMap(map);
+                    map.setCenter({lat:53.4333, lng: 6.94842});
+                    map.setZoom(11);
+                    break;
+                default:
+                    interestpoints.setMap(null);
+                    map.setZoom(10);
+                    map.setCenter(event.latLng);
+            }
+
             openInfoPanel();
         });
 
@@ -207,6 +247,10 @@ $(document).ready(function() {
         landingpointmap.setMap(landingpointmap.getMap() ? null : map);
     }
 
+    function toggleInterestMap() {
+        interestpoints.setMap(interestpoints.getMap() ? null : map);
+    }
+
     function openInfoPanel() {
         setTimeout(function() {
             $('#info-panel').addClass('slide-menu-open');
@@ -217,7 +261,7 @@ $(document).ready(function() {
         $('#info-panel').removeClass('slide-menu-open');
     }
 
-    function setPanelContent(title, image, source,  intro, climate, energy, economy, network, government) {
+    function setPanelContent(title, image, source,  intro, climate, energy, economy, network, government, geography) {
         var panel = $('#info-panel');
         panel_title.html(title);
         panel_image.attr('src', image);
@@ -263,11 +307,20 @@ $(document).ready(function() {
         else {
             panel_desc_government.parent().parent().hide();
         }
+
+        panel_desc_geography.html(geography);
+        if (geography !== undefined) {
+            panel_desc_geography.parent().parent().show();
+        }
+        else {
+            panel_desc_geography.parent().parent().hide();
+        }
     }
 
     function resetMap() {
         map.setCenter(default_map_center);
         map.setZoom(default_map_zoom);
+        interestpoints.setMap(null);
     }
 
     google.maps.event.addDomListener(window, 'load', InitializeBaseMap);
