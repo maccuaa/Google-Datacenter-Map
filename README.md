@@ -1,8 +1,8 @@
 # Examing Google's Datacenter Locations
 
 Andrew MacCuaig  
-09 Dec 2014
-Carleton University
+09 Dec 2014  
+Carleton University  
 Fall 2014  
 GEOG-2200 T  
 [Interactive Map](http://st-andrew.github.io/GEOG-2200/map)  
