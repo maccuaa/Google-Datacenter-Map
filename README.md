@@ -1,8 +1,16 @@
-# Google's Global Connections
+# Examing Google's Datacenter Locations
 
-Andrew MacCuaig
-Fall 2014
-[Interactive Map](http://st-andrew.github.io/GEOG-2200/map)
+Andrew MacCuaig  
+09 Dec 2014
+Carleton University
+Fall 2014  
+GEOG-2200 T  
+[Interactive Map](http://st-andrew.github.io/GEOG-2200/map)  
+[Report](http://st-andrew.github.io/GEOG-2200)
+
+_Notes_
+ - The text below is the source of all the points that are on the map.
+ - US based data centers are not included in this report.  The text displayed on those points are summaries pulled from the webpages on their respective [Google Datacenter](http://www.google.ca/about/datacenters/inside/locations/) page 
 
 ---
 
