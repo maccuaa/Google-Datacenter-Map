@@ -5,8 +5,8 @@ Andrew MacCuaig
 Carleton University  
 Fall 2014  
 GEOG-2200 T  
-[Interactive Map](http://st-andrew.github.io/GEOG-2200/map)  
-[Report](http://st-andrew.github.io/GEOG-2200)
+[Interactive Map](http://st-andrew.github.io/Google-Datacenter-Map/map)  
+[Report](http://st-andrew.github.io/Google-Datacenter-Map)
 
 _Notes_
  - The text below is the source of all the points that are on the map.
